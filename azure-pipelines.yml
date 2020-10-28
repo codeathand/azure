@@ -22,6 +22,7 @@ steps:
   inputs:
     command: 'custom'
     customCommand: 'run open'
+  continueOnError: true
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
