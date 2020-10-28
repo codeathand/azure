@@ -22,3 +22,10 @@ steps:
   inputs:
     command: 'custom'
     customCommand: 'run dev'
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '*.xml'
+    searchFolder: '$(System.DefaultWorkingDirectory)/cypress/reports/junit'
+    mergeTestResults: true
+    testRunTitle: 'Publish Test Results'
