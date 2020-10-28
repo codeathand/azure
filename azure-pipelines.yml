@@ -17,5 +17,8 @@ steps:
 
 - script: |
     npm install
-    npm run dev
   displayName: 'npm install'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run dev'
